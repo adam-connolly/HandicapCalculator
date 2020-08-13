@@ -1,0 +1,15 @@
+
+html{
+    font-size: 80%;
+}
+
+
+body{
+    font-family: "Lato", sans-serif;
+}
+.page-header {
+    font-weight: 700;
+}
+.table-course-handicap {
+    max-width: 50%;
+}

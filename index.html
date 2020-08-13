@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Course Handicap Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="display-6 page-header">Golf Handicap Calculator</h1>
+        <p>Use this calculator to find out the handicap of a golfer for a specific course.</p>
+        <div>
+            <table class="table table-borderless table-course-handicap">
+                <tbody>
+                    <tr>
+                        <td>
+                            Your Handicap Index
+                        </td>
+                        <td>
+                            <input type="text" name="hindex" value="10">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Course Rating
+                        </td>
+                        <td>
+                            <input type="text" name="ccourse" value="70">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Course Slope Rating
+                        </td>
+                        <td>
+                            <input type="cslope" name="hindex" value="121">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Course Par Score
+                        </td>
+                        <td>
+                            <input type="text" name="cpar" value="10">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="submit" class="btn btn-primary">Calculate</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h2 class="display-6">Handicap Index Calculator</h2>
+        <p>Use this calculator to compute the handicap indux of a golfer given data from at least 54 holes (3 rounds of 18 holes) of playing data). 
+            When filling the form, please provide either an 18-hole or 9-hole score. Do not provide both. The playing condition adjustment is an optional value 
+            between -1 and 3. If left blank, it will be treated as 0.</p>
+        <table class="table table-borderless" id="handicapIndexTable">
+            <thead>
+                <tr>
+                    <td></td>
+                    <td>Course Rating</td>
+                    <td>Course Slope Rating</td>
+                    <td>18-hole Score</td>
+                    <td>9-hole Score</td>
+                    <td>Playing Condition Adjustment</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Round #1</td>
+                    <td><input type="text" name="rating1"></td>
+                    <td><input type="text" name="slope1"></td>
+                    <td><input type="text" name="fullRound1"></td>
+                    <td><input type="text" name="halfRound1"></td>
+                    <td><input type="text" name="adjustment1"></td>
+                </tr>
+                <tr>
+                    <td>Round #2</td>
+                    <td><input type="text" name="rating2"></td>
+                    <td><input type="text" name="slope2"></td>
+                    <td><input type="text" name="fullRound2"></td>
+                    <td><input type="text" name="halfRound2"></td>
+                    <td><input type="text" name="adjustment2"></td>
+                </tr>
+                <tr>
+                    <td>Round #3</td>
+                    <td><input type="text" name="rating3"></td>
+                    <td><input type="text" name="slope3"></td>
+                    <td><input type="text" name="fullRound3"></td>
+                    <td><input type="text" name="halfRound3"></td>
+                    <td><input type="text" name="adjustment3"></td>
+                </tr>   
+            </tbody>
+            <button type="button" class="btn btn-success" onclick="addTableRow()">Add Round</button>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="app.js" type="text/javascript"></script>
+</body>
+</html>
